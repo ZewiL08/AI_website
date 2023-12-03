@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ts_finance</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>index</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -15157,6 +15157,19 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The code reads a CSV file containing stock data (specifically for the stock named 'TATASTEEL'), sets the &quot;Date&quot; column as the index, and then plots the percentage change of the VWAP column over time.
+This line calculates the percentage change of the &quot;VWAP&quot; (Volume Weighted Average Price) column in the DataFrame and then plots the result. The pct_change() function computes the percentage change between the current and a prior element.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15215,6 +15228,18 @@ class="
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Here computes log-returns for the VWAP, plots the Autocorrelation Function for the log-returns, prints an empty line, and then plots the Autocorrelation Function for the squared log-returns. These analyses can provide insights into the autocorrelation and volatility clustering in the time series data.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15285,6 +15310,18 @@ class="
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Here we compute and plot the Partial Autocorrelation Function (PACF) for both the log-returns and the squared log-returns. The PACF helps identify the direct relationship between an observation and its lags, providing insights into the potential order of an autoregressive model. The analysis can be useful in understanding the temporal dependencies in the time series data.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15354,6 +15391,18 @@ class="
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We fit a GARCH(1,0) model to the log-returns series using the arch library and then print a summary of the fitted model. GARCH models are commonly used in financial econometrics to model volatility clustering and time-varying volatility in asset returns.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15424,6 +15473,30 @@ Covariance estimator: robust
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Now let's explain the following plots :</p>
+<ol>
+<li><p>Standardized Residuals:
+ These are the residuals of the model standardized by the conditional volatility.
+ Standardized residuals help assess whether the model adequately captures the patterns in the data.
+ If there are significant patterns or trends in the standardized residuals, it may suggest that the model does not fully capture the information in the data.</p>
+</li>
+<li><p>Conditional Volatility:
+ This represents the time-varying volatility predicted by the GARCH model.
+ Examining conditional volatility helps understand how volatility changes over time.
+ Sudden spikes in conditional volatility might correspond to periods of high market uncertainty or unexpected events.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15476,6 +15549,18 @@ class="
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We now calculate the standardized residuals by dividing the raw residuals by the conditional volatility, which is a common step in the evaluation of GARCH models to check for patterns or anomalies in the standardized residuals. The max_lags variable, although defined, is not used directly in this snippet and its purpose would depend on the broader context of the code.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15494,6 +15579,18 @@ class="
 </div>
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>This code is generating an ACF plot for the squared log-returns series, which can provide insights into the presence of autocorrelation in the squared log-returns data. This type of analysis is often used in financial time series to understand volatility clustering.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15546,6 +15643,18 @@ class="
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The code is performing a Ljung-Box test on the squared log-returns up to a specified number of lags (max_lags). The loop then prints the lag and the rounded p-value for each lag, providing information about the statistical significance of autocorrelations at different lags in the squared log-returns series.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15600,6 +15709,18 @@ lag: 4 pval: 0.0
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>This code is performing a Ljung-Box test on the squared standardized residuals up to a specified number of lags (max_lags). The loop then prints the lag and the rounded p-value for each lag, providing information about the statistical significance of autocorrelations at different lags in the squared standardized residuals series. This type of analysis is often used to check for autocorrelation in the squared standardized residuals, which is relevant in the context of volatility modeling.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15644,6 +15765,18 @@ lag: 4 pval: 0.5123
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>This code is performing Engle's ARCH test on the log-returns series up to a specified maximum lag (maxlag). It then prints the p-values from both the Lagrange Multiplier (LM) test and the F-test. These p-values are used to assess the statistical significance of conditional heteroskedasticity in the log-returns series. If the p-values are below a certain significance level (commonly 0.05), it may suggest the presence of conditional heteroskedasticity in the data.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15685,6 +15818,18 @@ pval F-test: 0.0
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>This code is performing Engle's ARCH test on the squared standardized residuals up to a specified maximum lag (maxlag). It then prints the p-values from both the Lagrange Multiplier (LM) test and the F-test. These p-values are used to assess the statistical significance of conditional heteroskedasticity in the squared standardized residuals series. If the p-values are below a certain significance level (commonly 0.05), it may suggest the presence of conditional heteroskedasticity in the data.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15725,6 +15870,18 @@ pval F-test: 0.5195
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>This code is fitting a GARCH(1,1) model to the log-returns series, and it prints a detailed summary of the fitted model. This type of modeling is commonly used in financial time series analysis to capture volatility clustering and time-varying volatility in asset returns.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15771,7 +15928,7 @@ Distribution:                  Normal   AIC:                           23679.1
 Method:            Maximum Likelihood   BIC:                           23705.4
                                         No. Observations:                 5305
 Date:                Sun, Dec 03 2023   Df Residuals:                     5304
-Time:                        15:35:55   Df Model:                            1
+Time:                        16:13:37   Df Model:                            1
                                   Mean Model                                 
 =============================================================================
                  coef    std err          t      P&gt;|t|       95.0% Conf. Int.
@@ -15795,6 +15952,18 @@ Covariance estimator: robust
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The loop iterates over each lag up to max_lags and prints the lag number and the rounded p-value from the Ljung-Box test for the squared residuals. This provides information about the statistical significance of autocorrelations in the squared residuals at different lags. If the p-values are below a certain significance level (commonly 0.05), it may suggest the presence of autocorrelation in the squared residuals.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15806,7 +15975,7 @@ Covariance estimator: robust
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ljung-Box</span>
 <span class="n">residuals</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">resid</span>
 <span class="n">st_residuals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">conditional_volatility</span><span class="p">)</span>
-<span class="n">lb_test</span> <span class="o">=</span> <span class="n">acorr_ljungbox</span><span class="p">(</span><span class="n">dfl</span> <span class="o">**</span> <span class="mi">2</span> <span class="p">,</span> <span class="n">lags</span> <span class="o">=</span> <span class="n">max_lags</span><span class="p">)</span>
+<span class="n">lb_test</span> <span class="o">=</span> <span class="n">acorr_ljungbox</span><span class="p">(</span><span class="n">residuals</span> <span class="o">**</span> <span class="mi">2</span> <span class="p">,</span> <span class="n">lags</span> <span class="o">=</span> <span class="n">max_lags</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">lag</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_lags</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;lag: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lag</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; pval: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span> <span class="n">lb_test</span><span class="p">[</span><span class="s2">&quot;lb_pvalue&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">lag</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="p">))</span>
 </pre></div>
@@ -15841,6 +16010,18 @@ lag: 4 pval: 0.0
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The loop iterates over each lag up to max_lags and prints the lag number and the rounded p-value from the Ljung-Box test for the squared standardized residuals. This provides information about the statistical significance of autocorrelations in the squared standardized residuals at different lags. If the p-values are below a certain significance level (commonly 0.05), it may suggest the presence of autocorrelation in the squared standardized residuals.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15884,6 +16065,18 @@ lag: 4 pval: 0.9966
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>This code is performing Engle's ARCH test on the log-returns series up to a specified maximum lag (maxlag). It then prints the p-values from both the Lagrange Multiplier (LM) test and the F-test. These p-values are used to assess the statistical significance of conditional heteroskedasticity in the log-returns series. If the p-values are below a certain significance level (commonly 0.05), it may suggest the presence of conditional heteroskedasticity in the data.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15925,6 +16118,18 @@ pval F-test: 0.0
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>This code is performing Engle's ARCH test on the squared standardized residuals up to a specified maximum lag (maxlag). It then prints the p-values from both the Lagrange Multiplier (LM) test and the F-test. These p-values are used to assess the statistical significance of conditional heteroskedasticity in the squared standardized residuals series. If the p-values are below a certain significance level (commonly 0.05), it may suggest the presence of conditional heteroskedasticity in the data.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15965,6 +16170,19 @@ pval F-test: 0.9966
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>This line fits the AR model to the scaled log-returns series and prints a summary of the fitted model. The fit() method is called to estimate the parameters of the AR model, and summary() provides detailed information about the estimated parameters, standard errors, t-values, and other statistics.</p>
+<p>In summary, this code fits an autoregressive model with lags 1 and 3 to the scaled log-returns series and prints a summary of the fitted model. The AR model is commonly used to capture linear dependencies in time series data by modeling the current value as a linear combination of past values.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16029,6 +16247,18 @@ Covariance estimator: White&#39;s Heteroskedasticity Consistent Estimator
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In summary, this code combines an autoregressive (AR) model with a GARCH model for volatility in a unified framework. The AR component captures the linear dependencies in the log-returns series, while the GARCH component models the time-varying volatility. The final fitted model is then summarized and printed.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16096,6 +16326,18 @@ Covariance estimator: robust
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>These diagnostic plots are crucial for assessing the goodness of fit and identifying potential issues with the model. The standardised residuals plot can help you check for any patterns or outliers in the residuals, while the conditional volatility plot provides insights into the volatility dynamics captured by the GARCH model.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16193,6 +16435,18 @@ class="
 </div>
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We now fit an autoregressive model with a lag of 1 and a GARCH(1,1) volatility model to our training data, then prints a summary of the fitted model.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16259,6 +16513,18 @@ Covariance estimator: robust
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The code is generating a forecast using the AR-GARCH model and then organizing the forecasted values along with actual values into a DataFrame for further analysis or visualization.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16428,6 +16694,18 @@ Covariance estimator: robust
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>the code loads the S&amp;P 500 dataset, extracts the adjusted closing prices, calculates daily returns as percentages, and scales them by a factor of 100. The resulting returns series represents the daily percentage returns of the S&amp;P 500.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16448,6 +16726,18 @@ Covariance estimator: robust
 </div>
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The code is fitting a GARCH(1,1) model with a skewed Student's t-distribution to the daily returns of the S&amp;P 500 and suppressing the display of optimization convergence information.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16465,6 +16755,18 @@ Covariance estimator: robust
 </div>
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The code generates forecasts for the conditional mean and variance of the GARCH model, extracts forecasts starting from the year 2018, and computes quantiles for the skewed Student's t-distribution based on the estimated model parameters. The quantiles are then printed.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16506,6 +16808,18 @@ Covariance estimator: robust
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The code calculates parametric VaR based on the GARCH model, creates a plot of the VaR values, and overlays scatter points to visualize actual returns exceeding specific VaR thresholds for the year 2018. Different colors and markers are used to distinguish between different levels of exceedance. The legend provides information about the colors and their corresponding labels.</p>
+
+</div>
+</div>
+</div>
 </div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">

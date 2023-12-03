@@ -15103,7 +15103,77 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>GE2340 - Course Project - 2023/2024 Semester A <br />
+MOIROUD William 40148105 <br />
+Sungjun Kim 56844492</p>
+
+</div>
+</div>
+</div>
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Our goal with this website is to discuss a technology that we have discovered and experimented with. That's why this website will demonstrate how one can leverage AI in Financial Technologies, specifically focusing on how to utilize time series analysis in a prediction project. We have endeavored to provide detailed explanations throughout the code and offer interpretations of the various results obtained. The data utilized for this project is accessible on the following website (<a href="https://www.kaggle.com/datasets/rohanrao/nifty50-stock-market-data">https://www.kaggle.com/datasets/rohanrao/nifty50-stock-market-data</a>) and has been employed to ensure transparency and reproducibility in our analyses. <br />
+Our main motivation was to discover the tools commonly used in the financial domain for predicting market prices. When we learned that Time Series Analysis is a viable approach, we decided to experiment on our own, and that is the primary focus of this website.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Project Overview: Time Series Analysis using GARCH Model</p>
+<p>Objective:
+The project aims to conduct time series analysis on the daily returns of the S&amp;P 500 stock market index. The analysis involves the application of an Autoregressive Generalized Autoregressive Conditional Heteroskedasticity (AR-GARCH) model with a skewed Student's t-distribution.</p>
+<p>Data Collection and Preprocessing:</p>
+<pre><code>S&amp;P 500 daily data is loaded using the arch library, and the adjusted closing prices are extracted.
+Daily returns are calculated by taking the percentage change of the adjusted closing prices.
+
+</code></pre>
+<p>Modeling:</p>
+<pre><code>An AR-GARCH model is specified using the arch library, where volatility is modeled with a GARCH(1,1) process, and the distribution of innovations is assumed to be a skewed Student's t-distribution.
+The model is fitted to the daily returns, and parameters are estimated using the maximum likelihood method.
+
+</code></pre>
+<p>Forecasting:</p>
+<pre><code>Forecasts are generated for the conditional mean and variance of the GARCH model starting from a specified date in 2018.
+Quantiles for the skewed Student's t-distribution are computed based on the estimated model parameters.
+
+</code></pre>
+<p>Risk Assessment and Visualization:</p>
+<pre><code>Value at Risk (VaR) is calculated using the forecasted mean and variance along with quantiles.
+VaR values are visualized over time.
+Actual returns exceeding specific VaR thresholds are identified and marked on the plot with different colors and markers.
+A legend is added for better interpretation.
+
+</code></pre>
+<p>Results and Interpretation:</p>
+<pre><code>The project provides insights into the volatility and risk of the S&amp;P 500 based on the fitted AR-GARCH model.
+The visualization helps assess the model's performance by comparing forecasted VaR with actual returns.
+
+</code></pre>
+<p>Conclusion:
+The time series analysis using the AR-GARCH model offers a robust framework for understanding and managing financial risk in the context of stock market returns. The project demonstrates proficiency in utilizing statistical models for financial time series analysis and visualization.</p>
+
+</div>
+</div>
+</div>
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16889,6 +16959,22 @@ class="
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Reference :
+<a href="https://www.youtube.com/watch?v=74rDhJexmTg&amp;ab_channel=AbhishekThakur">https://www.youtube.com/watch?v=74rDhJexmTg&amp;ab_channel=AbhishekThakur</a> <br />
+<a href="https://www.kaggle.com/code/konradb/ts-0-the-basics/notebook">https://www.kaggle.com/code/konradb/ts-0-the-basics/notebook</a> <br />
+<a href="https://www.kaggle.com/datasets/rohanrao/nifty50-stock-market-data">https://www.kaggle.com/datasets/rohanrao/nifty50-stock-market-data</a>  <br />
+<a href="https://www.investopedia.com/how-to-use-artificial-intelligence-in-your-investing-7973810">https://www.investopedia.com/how-to-use-artificial-intelligence-in-your-investing-7973810</a></p>
+
+</div>
+</div>
+</div>
 </div>
 </body>
 
